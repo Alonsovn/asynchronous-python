@@ -106,9 +106,10 @@ def main():
             run_complex_operations_with_threads()
         elif user_option == 4:
             run_complex_operations_in_main_thread()
-        else:
-            print("Not valid option")
+        elif user_option == 5:
             break
+        else:
+            print("Your option is not valid, try again!")
 
         user_option = user_menu()
 
