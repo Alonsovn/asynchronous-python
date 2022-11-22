@@ -21,7 +21,7 @@ source mypython/bin/activate
 A glossary of terms used in concurrency
 
 
-**Synchronous**: actions that happen one after another. Programming as we've seen it until now is synchronous, because each line executes after the previous one.
+**Synchronous**: actions that happen one after another. Programming as we've seen it until now is synchronous, because each line executes after the previous one.  
 **Asynchronous**: actions that don't necessary happen after one another, or that can happen in arbitrary order ("without synchrony").  
 **Concurrency**: The ability of our programs to run things in different order every time the program runs, without affecting the final outcome.  
 **Parallelism**: Running two or more things at the same time.  
