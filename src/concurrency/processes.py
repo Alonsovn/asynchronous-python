@@ -1,4 +1,5 @@
 import time
+from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import Process
 
 
@@ -23,7 +24,7 @@ def complex_calculation():
     print(f"complex_calculation, {end - start}")
 
 
-def main():
+def use_processes():
     # Use Processes if you have multiple core machine and you want to do complex calculations
     process = Process(target=complex_calculation)
     process2 = Process(target=complex_calculation)
@@ -37,6 +38,24 @@ def main():
 
     end_time = time.time()
     print(f"Two threads total time: {end_time - start_time}")
+
+
+def use_processes_pool_executor():
+    # Use Processes if you have multiple core machine and you want to do complex calculations
+    # This is a simpler code to use processes
+    start_time = time.time()
+    with ProcessPoolExecutor(max_workers=2) as pool:
+        pool.submit(complex_calculation)
+        pool.submit(complex_calculation)
+
+    end_time = time.time()
+    print(f"Two threads total time: {end_time - start_time}")
+
+
+def main():
+    use_processes()
+    print("---------\n")
+    use_processes_pool_executor()
 
 
 if __name__ == '__main__':
