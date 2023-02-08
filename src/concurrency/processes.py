@@ -25,7 +25,7 @@ def complex_calculation():
 
 
 def use_processes():
-    # Use Processes if you have multiple core machine and you want to do complex calculations
+    # Use Processes if you have multiple core machine, and you want to do complex calculations
     process = Process(target=complex_calculation)
     process2 = Process(target=complex_calculation)
     start_time = time.time()
