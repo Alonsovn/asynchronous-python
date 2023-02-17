@@ -26,6 +26,7 @@ def main():
     # --------
     # --------
     # New counter value: 6
+    # To fix that issue, check the code in queued_thread.py file
     for x in range(10):
         t = Thread(target=increment_counter)
         time.sleep(random.randint(0, 2))
