@@ -22,7 +22,7 @@ def increment_manager():
         job_queue.task_done()  # this unlock the queue
 
 
-# printer_manager and increment_manager run continuously because of the `daemon` flag
+# increment_manager run continuously because of the `daemon` flag
 Thread(target=increment_manager, daemon=True).start()
 
 
