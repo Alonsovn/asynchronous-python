@@ -12,7 +12,7 @@ def increment_manager():
     global counter
 
     while True:
-        increment = job_queue.get()  # This waits until an item is available adn locks the queue
+        increment = job_queue.get()  # This waits until an item is available and locks the queue
         time.sleep(random.random())
         old_counter = counter
         counter = old_counter + increment
@@ -36,4 +36,4 @@ for x in range(10):
     _ = executor.submit(increment_counter)
 
 
-job_queue.join()  # wait for counter_queue to be empty
+job_queue.join()  # wait for job_queue to be empty
